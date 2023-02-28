@@ -1,0 +1,194 @@
+:root {
+    --text: hsl(0 0% 80%);
+    --bg: hsl(0 0% 5%);
+    --button-bg: hsl(0 0% 18%);
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    max-width: 60ch;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 1rem 1rem 1rem;
+
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 150%;
+
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+h1 {
+    position: relative;
+    width: fit-content;
+    margin: 0;
+
+    font-family: "Lemonada", serif;
+    font-size: clamp(2rem, 10vw, 4rem);
+    line-height: 140%;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, hsl(280 100% 40%), hsl(320 100% 60%),  hsl(40 100% 60%));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    height: 4px;
+    
+    background: linear-gradient(to right, hsl(280 100% 40%), hsl(320 100% 60%));
+    border-radius: 2px;
+}
+
+nav {
+    --gap: 0.5ch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav > a {
+    text-decoration: none;
+}
+    
+main {
+    flex: 1;
+}
+
+p {
+    margin: 0;
+}
+
+hr {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+#date {
+    margin-bottom: 1rem;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1ch;
+}
+
+input {
+    width: 0;
+    flex: 1;
+
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+
+    color: var(--text);
+    background-color: var(--bg);
+
+    border: none;
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.icon-label {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap, 1ch);
+    min-width: max-content;
+}
+
+#thanks,
+#max-lines,
+#download-link {
+    display: none;
+}
+
+button {
+    flex: 1;
+    padding: 0;
+
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+    color: var(--text);
+    background-color: var(--bg);
+
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+button:hover {
+    filter: brightness(140%);
+}
+
+button.primary,
+button.secondary {
+    padding: 0.6rem 1.2rem;
+}
+
+button.primary {
+    background-color: var(--button-bg);
+}
+
+button.secondary {
+    border: 2px solid var(--button-bg);
+}
+
+/* icons */
+i::before {
+    font-size: 24px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+a {
+    color: var(--text);
+}

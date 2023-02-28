@@ -1,0 +1,21 @@
+main > * + * {
+    padding-top: 0.5rem;
+    border-top: 2px solid hsl(0 0% 30%);
+    margin-top: 0.5rem;
+}
+
+main > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+main > div > button {
+    flex: 0;
+    opacity: 0;
+}
+
+main > div:hover > button {
+    opacity: 1;
+}
