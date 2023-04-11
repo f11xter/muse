@@ -1,0 +1,17 @@
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title>.button {
+  flex: 0;
+}
+
+#delete {
+  color: var(--error);
+}
+
+#msg {
+  display: none;
+}

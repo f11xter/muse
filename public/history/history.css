@@ -1,0 +1,16 @@
+#empty {
+    --gap: 0.5ch;
+    width: fit-content;
+}
+
+#pagination-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.history-item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}

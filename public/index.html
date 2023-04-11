@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+  <title>muse</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Journalling done differently." />
+  <meta name="og:title" content="muse" />
+  <meta name="og:type" content="website" />
+  <meta name="og:url" content="https://f11xter.github.io/muse" />
+  <meta name="og:image" content="https://f11xter.github.io/muse/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+
+  <link rel="icon" href="favicon.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="/muse/main.css" />
+  <link rel="stylesheet" href="home.css" />
+
+  <script src="home.js" type="module" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>muse</h1>
+
+    <nav>
+      <a href="/muse" class="icon-label">
+        <i class="iconoir-home"></i>
+        home
+      </a>
+      <a href="/muse/history" class="icon-label">
+        <i class="iconoir-list"></i>
+        history
+      </a>
+      <a id="nav-login" href="/muse/login" class="icon-label">
+        <i class="iconoir-log-in"></i>
+        log in
+      </a>
+      <a id="nav-account" href="/muse/account" class="icon-label" style="display: none;">
+        <i class="iconoir-user"></i>
+        account
+      </a>
+    </nav>
+  </header>
+
+  <noscript>
+    <div style="border: 2px dashed red; border-radius: 1rem; padding: 1rem;">
+      <p style="font-size: 1.5rem; margin: 0;">
+        This site requires JavaScript to work properly.
+      </p>
+      <p style="margin: 0;">
+        If you'd like to review the code, please visit the
+        <a href="https://github.com/f11xter/muse" style="color: deepskyblue;">GitHub</a>
+      </p>
+    </div>
+  </noscript>
+
+  <main class="flow">
+    <p>
+      Record your thoughts about today<br />
+      Each line becomes permanent when you hit enter<br />
+      The past is the past
+    </p>
+
+    <hr />
+
+    <p id="date"></p>
+
+    <div id="editor"></div>
+
+    <p id="thanks" class="hidden">
+      Thanks for musing today!<br />
+      See you tomorrow!
+    </p>
+
+    <p id="max-lines" class="hidden">Max lines reached!</p>
+
+    <p id="msg" class="hidden"></p>
+
+    <div class="button-container">
+      <button id="clear" type="button" class="button secondary icon-label">
+        <i class="iconoir-erase"></i>
+        Clear
+      </button>
+
+      <button id="save" type="button" class="button primary icon-label">
+        <i class="iconoir-cloud-upload"></i>
+        Save
+      </button>
+    </div>
+
+    <button id="download" type="button" class="button tertiary icon-label">
+      <i class="iconoir-download"></i>
+      Download
+    </button>
+
+    <p id="download-link" class="hidden">
+      If download doesn't start automatically, click here:
+    </p>
+  </main>
+
+  <hr />
+
+  <footer>
+    <p>
+      Got thoughts or suggestions?
+    </p>
+
+    <a href="https://github.com/f11xter/muse/discussions/" class="icon-label">
+      <i class="iconoir-message-text"></i>
+      Get in touch
+    </a>
+  </footer>
+</body>
