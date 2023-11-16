@@ -10,8 +10,8 @@
   <meta name="description" content="Journalling done differently." />
   <meta name="og:title" content="muse" />
   <meta name="og:type" content="website" />
-  <meta name="og:url" content="https://f11xter.github.io/muse" />
-  <meta name="og:image" content="https://f11xter.github.io/muse/og-image.png" />
+  <meta name="og:url" content="https://muse.felixwaller.dev" />
+  <meta name="og:image" content="https://muse.felixwaller.dev/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
 
   <link rel="icon" href="favicon.svg" type="image/x-icon" />
-  <link rel="stylesheet" href="/muse/main.css" />
+  <link rel="stylesheet" href="/main.css" />
 
   <script src="login.js" type="module" defer></script>
 </head>
@@ -30,19 +30,19 @@
   <header>
     <h1>muse</h1>
     <nav>
-      <a href="/muse" class="icon-label">
+      <a href="/" class="icon-label">
         <i class="iconoir-home"></i>
         home
       </a>
-      <a href="/muse/history" class="icon-label">
+      <a href="/history" class="icon-label">
         <i class="iconoir-list"></i>
         history
       </a>
-      <a id="nav-login" href="/muse/login" class="icon-label">
+      <a id="nav-login" href="/login" class="icon-label">
         <i class="iconoir-log-in"></i>
         log in
       </a>
-      <a id="nav-account" href="/muse/account" class="icon-label" style="display: none;">
+      <a id="nav-account" href="/account" class="icon-label" style="display: none;">
         <i class="iconoir-user"></i>
         account
       </a>
@@ -73,26 +73,26 @@
         <p class="invalid-msg">Please enter a valid email address</p>
         <p id="email-error"></p>
       </div>
-  
+
       <div>
         <label for="password">Password</label>
         <input type="password" id="password" minlength="6"/>
         <p class="invalid-msg">Password must be at least 6 characters</p>
         <p id="password-error"></p>
       </div>
-      
+
       <p id="error" style="display: none;"></p>
 
       <button id="forgot" type="button" class="button a">
         Forgot password?
       </button>
-      
+
       <div class="button-container">
         <button id="signup" type="button" class="button secondary icon-label">
           <i class="iconoir-add-user"></i>
           Sign Up
         </button>
-    
+
         <button id="login" type="button" class="button primary icon-label">
           <i class="iconoir-log-in"></i>
           Log In

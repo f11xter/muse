@@ -1,5 +1,5 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-import { auth } from "/muse/firebase.js";
+import { auth } from "/firebase.js";
 
 const params = new URLSearchParams(window.location.search);
 const isRedirect = params.get("redirect") === "true";
@@ -110,6 +110,6 @@ function redirect() {
     history.back();
   }
   else {
-    window.location.href = "/muse/account";
+    window.location.href = "/account";
   }
 }

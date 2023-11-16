@@ -1,6 +1,6 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 import { doc, getDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js'
-import { auth, db } from "/muse/firebase.js";
+import { auth, db } from "/firebase.js";
 
 const params = new URLSearchParams(document.location.search);
 const id = params.get("id");
@@ -10,7 +10,7 @@ onAuthStateChanged(auth, (user) => {
     displayMuse();
   }
   else {
-    window.location.href = "/muse/login?redirect=true";
+    window.location.href = "/login?redirect=true";
   }
 });
 

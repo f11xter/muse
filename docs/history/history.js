@@ -1,13 +1,13 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 import { collection, deleteDoc, doc, getDocs, limit, orderBy, query, startAfter, startAt } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
-import { auth, db } from "/muse/firebase.js";
+import { auth, db } from "/firebase.js";
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
     displayHistory(false);
   }
   else {
-    window.location.href = "/muse/login?redirect=true";
+    window.location.href = "/login?redirect=true";
   }
 });
 
@@ -26,7 +26,7 @@ nextButton.addEventListener("click", () => displayHistory(true));
 
 /**
  * Fetch and display history
- * 
+ *
  * Limits to 10 entries ordered by descending time
  * @param {boolean} next true if should load next set of 10, false if should load previous or initial
  */
@@ -102,7 +102,7 @@ async function displayHistory(next) {
 
 function addHistoryItem(id, title, preview) {
   const link = document.createElement("a");
-  link.href = `/muse/history/muse?id=${id}`;
+  link.href = `/history/muse?id=${id}`;
   link.textContent = title;
 
   const p = document.createElement("p");

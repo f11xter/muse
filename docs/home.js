@@ -1,6 +1,6 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 import { addDoc, collection, doc, getDoc, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
-import { auth, db } from "/muse/firebase.js";
+import { auth, db } from "/firebase.js";
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -90,7 +90,7 @@ async function saveClicked() {
   }
 
   else {
-    window.location.href = "/muse/login?redirect=true";
+    window.location.href = "/login?redirect=true";
   }
 }
 
